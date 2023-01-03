@@ -1,7 +1,19 @@
-function say_my_name (name){
-	alert ('Heisenberg ' + name);
+function do_something () {
+	var current_class_name = document.getElementById('cool').className;
 
+	if (current_class_name == 'cool') {
+		document.getElementById('cool').className = 'cool red';
+	} else	{
+		document.getElementById('cool').className = 'cool';
+	}
+	
+
+
+	// changes class name
+	// document.getElementById('cool').className = 'cool red';
 }
+
+
 
 
 var car = {
