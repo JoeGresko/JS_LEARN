@@ -1,3 +1,9 @@
+function say_my_name (name){
+	alert ('Heisenberg ' + name);
+
+}
+
+
 var car = {
 	make: 'BMV',
 	type: 'Polo',
