@@ -1,47 +1,31 @@
-function do_something () {
-	var current_class_name = document.getElementById('cool').className;
+function change_state (state) {
+	document.body.className = 'body-state'+state;
+	clearInterval(timer);
+	countdown_number = 10;
+	document.getElementById('countdown').innerHTML = countdown_number;
+	if (state == 2)	{
+		timer = setInterval(function (){
+			countdown_number = countdown_number-1;
+			document.getElementById('countdown').innerHTML = countdown_number;
+			if (countdown_number<=0) {
+				change_state(3);	
+			};
+		}, 500);
 
-	if (current_class_name == 'cool') {
-		document.getElementById('cool').className = 'cool red';
-	} else	{
-		document.getElementById('cool').className = 'cool';
-	}
-	
-
-
-	// changes class name
-	// document.getElementById('cool').className = 'cool red';
+	}else if (state == 3) {
+		var success = setTimeout(function ()
+			{
+		var random_number = Math.round(Math.random() * 10);
+		console.log(random_number)
+		// success
+		if (random_number > 5) {
+			change_state(4);
+		} else {
+			change_state(5);
+		}
+}, 2000);
+	};
 }
 
-
-
-
-var car = {
-	make: 'BMV',
-	type: 'Polo',
-	color: 'blue',
-	is_turned_on: false,
-	number_wheels: 4,
-	seats: [
-	'seat1', 
-	'seat2', 
-	'seat3', 
-	'seat4'
-	],
-ignite: function () {
-	this.is_turned_on = true;
-	return('Brrrrrrr');
-	},
-fly: function () {
-	alert ('fly');
-	},
-swap: function (is_on) {
-	console.log('turn car' + is_on)
-	if (is_on == true) {
-		this.is_turned_on = true;
-		} else {
-			this.is_turned_on = false;
-			}
-	}
-};
-	
+var timer = null;
+var countdown_number = 10;

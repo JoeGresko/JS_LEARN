@@ -5,26 +5,26 @@
 	<script type="text/javascript" src="D:\Рабочее\Website\JavaScript\JS_LEARN\rocket.js"></script>
 	<link rel="stylesheet" href="D:\Рабочее\Website\JavaScript\JS_LEARN\style.css">
 </head>
-<body>
+<body class="body-state1">
 	<div class="left">
 		<div class="state1">
 			<h1>JS Rocket Launch</h1>
-			<a href="" class="button" onclick="Start_countdown();">Launch</a>
+			<a href="#" class="button" onclick="change_state(2);">Launch</a>
 		</div>
 		<div class="state2">
 			<h1 id="countdown">10</h1>
-			<a href="" class="button" onclick="abort();">Abort!</a>
+			<a href="#" class="button" onclick="change_state(1);">Abort!</a>
 		</div>
 		<div class="state3">
 			<h1>Lift Off</h1>
 		</div>
 		<div class="state4">
 			<h1>Well Done</h1>
-			<a href="" class="button" onclick="try_again();">Try Again</a>
+			<a href="#" class="button" onclick="change_state(1);">Try Again</a>
 		</div>
 		<div class="state5">
 			<h1>Shit Happens</h1>
-			<a href="" class="button" onclick="try_again();">Destroy Again</a>
+			<a href="#" class="button" onclick="change_state(1);">Destroy Again</a>
 		</div>
 	</div>
 	<div class="right">
