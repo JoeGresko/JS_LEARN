@@ -30,45 +30,29 @@ body {
 	height: 20px;
 }
 
-.rocket {
+.rocket{
 	position: absolute;
 	left: 50%;
-	margin-left: -75px;
-	bottom: -70px;
+	bottom: 20px;
 	width: 200px;
-	height: 300px;
-	background: url('Rocket_1.png') no-repeat 0 0;
+	height: 200px;
+	background: url(Rocket_1.png) no-repeat 0 0;
 	transition: bottom 10000ms;
-}
-
-body.body-state2 .rocket{
-	transition: none;
-	background-image: url(Rocket_2.png) ;
-}
-
-body.body-state3 .rocket{
-	transition: none;
-	background-color: blue;
-}
-
-body.body-state4 .rocket{
-	transition: none;
-}
-
-body.body-state5 .rocket{
-	transition: none;
 }
 
 body.body-state1 .rocket{
 	transition: none;
+	background: url(Rocket_1.png) no-repeat 0 0;
 }
-
-
-
-
+body.body-state2 .rocket{
+	background: url(Rocket_2.png);
+}
 body.body-state3 .rocket,
 body.body-state4 .rocket {
 	bottom: 1000px;	
+	width: 200px;
+	height: 200px;
+	background: url(Rocket_3.png) no-repeat center center;
 }
 .state1,
 .state2,
