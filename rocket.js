@@ -55,6 +55,7 @@ function handleMouseMOve (event) {
   output.y.oposite = output.y.end - (input.mouseY.fraction * output.y.range)
 //   apply output to html
   pupilsArray.forEach(function (pupil, k) {
+// DELETE output.y.oposite and output.x.oposite and if else with k to make normal eyes
     if (k === 0) {
       pupil.style.transform = 'translate('+output.x.current+'px, '+  output.y.oposite+'px)';
   }else {
